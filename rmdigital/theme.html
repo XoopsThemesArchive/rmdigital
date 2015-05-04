@@ -1,0 +1,129 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="<{$xoops_langcode}>" lang="<{$xoops_langcode}>">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=<{$xoops_charset}>" />
+<meta http-equiv="content-language" content="<{$xoops_langcode}>" />
+<meta name="robots" content="<{$xoops_meta_robots}>" />
+<meta name="keywords" content="<{$xoops_meta_keywords}>" />
+<meta name="description" content="<{$xoops_meta_description}>" />
+<meta name="rating" content="<{$xoops_meta_rating}>" />
+<meta name="author" content="<{$xoops_meta_author}>" />
+<meta name="copyright" content="<{$xoops_meta_copyright}>" />
+<meta name="generator" content="XOOPS" />
+<title><{$xoops_sitename}> - <{$xoops_pagetitle}></title>
+<link href="<{$xoops_url}>/favicon.ico" rel="SHORTCUT ICON" />
+<link rel="stylesheet" type="text/css" media="screen" href="<{$xoops_url}>/xoops.css" />
+<link rel="stylesheet" type="text/css" media="screen" href="<{$xoops_themecss}>" />
+<!-- RMV: added module header -->
+<{$xoops_module_header}>
+<script type="text/javascript">
+<!--
+<{$xoops_js}>
+//-->
+</script>
+</head>
+
+<body>
+<!--//
+Tema para XOOPS 2
+@Nombre:	RMDigital
+@Autor:		BiteC3R0 <bitec3r0@hotmail.com>
+@Sitio Web:	http://www.redmexico.com.mx
+
+Utilizalo libremente. Por favor manten estas líneas y
+manten nuestros créditos.
+
+Encuentra mas themes en www.redmexico.com.mx
+//-->
+<table width="750" class="main" align="center" cellpadding="0" cellspacing="0">
+<tr><td class="header">
+<table width="750" border="0" align="center" cellpadding="0" cellspacing="0">
+      <tr>
+        <td class="subHLinks">&middot; <a href="<{$xoops_url}>" style="color: #FFFFFF;">Accueil</a> &nbsp;&nbsp;&middot; <a href="<{$xoops_url}>/modules/newbb" style="color:#FFFFFF;">Forum</a> &nbsp;&nbsp;&middot; <a href="<{$xoops_url}>/modules/mydownloads" style="color:#FFFFFF;">Téléchargements</a> &nbsp;&nbsp;&middot; <a href="<{$xoops_url}>/modules/mylinks" style="color:#FFFFFF;">Liens Web</a> &nbsp;&nbsp;&middot; <a href="<{$xoops_url}>/modules/contact" style="color:#FFFFFF;">Contact</a></td>
+      </tr>
+      <tr>
+        <td height="7"><img src="<{$xoops_imageurl}>images/h_top.jpg" width="750" height="7"></td>
+      </tr>
+      <tr>
+        <td><table width="750" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td width="18"><img src="<{$xoops_imageurl}>images/h_mleft.jpg" width="18" height="81"></td>
+            <td width="199"><a href="<{$xoops_url}>"><img src="<{$xoops_imageurl}>images/logo.jpg" width="199" height="81" border="0"></a></td>
+            <td width="38"><img src="<{$xoops_imageurl}>images/h_mc.jpg" width="38" height="81"></td>
+            <td class="banner"><{$xoops_banner}></td>
+          </tr>
+        </table></td>
+      </tr>
+      <tr>
+        <td><img src="<{$xoops_imageurl}>images/h_mb.jpg" width="750" height="27"></td>
+      </tr>
+      <tr>
+        <td><img src="<{$xoops_imageurl}>images/h_bot.jpg" width="750" height="40"></td>
+      </tr>
+</table>
+</td></tr>
+</table>
+<table width="750" border="0" align="center" cellpadding="0" cellspacing="0" class="main">
+  <tr>
+  <form action="<{$xoops_url}>/search.php" method="get">
+    <td class="search">
+	Recherche : 
+	<input type="hidden" name="action" value="results" /><input name="query" type="text" class="txtbox" id="query" /> <input name="sbt" type="submit" id="sbt" value="Ir" class="button" />
+	</td>
+  </form>
+  </tr>
+  <tr>
+    <td><table width="750" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td valign="top" class="left">
+		<{foreach item=block from=$xoops_lblocks}>
+        	<{include file="rmdigital/theme_blockleft.html"}><br>
+        <{/foreach}>
+		<{foreach item=block from=$xoops_rblocks}>
+        	<{include file="rmdigital/theme_blockright.html"}>
+	    <{/foreach}><br>
+		</td>
+        <td valign="top" class="content">
+		<{$xoops_contents}><br><br>
+		<{if $xoops_showcblock == 1}>
+        	<{foreach item=block from=$xoops_ccblocks}>
+            	<{include file="rmdigital/theme_blockcenter_c.html"}><br>
+            <{/foreach}>
+        <{/if}><br />
+        <table width="100%"  border="0" cellspacing="0" cellpadding="4">
+          <tr>
+            <td id="centerLcolumn" valign="top">
+              <!-- Start center-left blocks loop -->
+<{foreach item=block from=$xoops_clblocks}> <{include file="rmdigital/theme_blockcenter_l.html"}> <{/foreach}>
+      <!-- End center-left blocks loop -->
+            </td>
+            <td id="centerRcolumn" valign="top">
+              <!-- Start center-right blocks loop -->
+<{foreach item=block from=$xoops_crblocks}> <{include file="rmdigital/theme_blockcenter_r.html"}> <{/foreach}>
+      <!-- End center-right blocks loop -->
+            </td>
+          </tr>
+        </table></td>
+        </tr>
+    </table>    </td>
+  </tr>
+</table>
+<table class="main" width="750" border="0" align="center" cellpadding="0" cellspacing="0">
+  <tr class="main">
+    <td height="9"><img src="<{$xoops_imageurl}>images/f_up.gif" width="750" height="9" /></td>
+  </tr>
+  <tr class="main">
+    <td class="copy">Copyright &copy; 2005. Red Mexico Soft. www.redmexico.com.mx</td>
+  </tr>
+  <tr class="main">
+    <td class="copy">Thème par Red Mexico Soft. XOOPS 2 </td>
+  </tr>
+  <tr class="main">
+    <td class="copy">Xoops France <a href="http://www.frxoops.org" target="_blank">FrXoops.org</a></td>
+  </tr>
+  <tr class="main">
+    <td><img src="<{$xoops_imageurl}>images/f_bot.jpg" width="750" height="39" /></td>
+  </tr>
+</table>
+</body>
+</html>

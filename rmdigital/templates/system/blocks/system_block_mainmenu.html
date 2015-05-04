@@ -1,0 +1,25 @@
+<table class="blocks" cellspacing="1" cellpadding="0" width="100%">
+  <tr>
+    <td class="menuOdd">
+      <!-- start module menu loop -->
+      <a href="<{$xoops_url}>"><{$block.lang_home}></a>
+      <!-- end module menu loop -->
+    </td>
+  </tr>
+  <{foreach item=module from=$block.modules}>
+  <tr>
+    <td class="<{cycle values="menuEven, menuOdd"}>">
+      <!-- start module menu loop -->
+      <a href="<{$xoops_url}>/modules/<{$module.directory}>/"><{$module.name}></a>
+      <!-- end module menu loop -->
+    </td>
+  </tr>
+  <{foreach item=sublink from=$module.sublinks}>
+  <tr>
+    <td class="submenu">
+          <a class="menuSub" href="<{$sublink.url}>"><{$sublink.name}></a>
+	</td>
+  </tr>
+  <{/foreach}>
+  <{/foreach}>
+</table>
